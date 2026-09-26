@@ -1,0 +1,127 @@
+Build me a personal single-page website called "My AI Engineering Career Switch" — 
+a career roadmap and single source of truth for my transition from LAMP/JS/React 
+developer to GenAI/Agentic AI Engineer. Use React + TypeScript + Tailwind CSS. 
+Make it a clean, modern, dark-mode-friendly dashboard-style site, deployable as a 
+static site (Vite build) so I can host it on my own domain.
+
+BACKGROUND CONTEXT (for tone/framing only, don't display as raw text):
+I have 5 years LAMP + 3 years maintenance experience, 2 years JS/React, and am 
+learning Python for a career switch into GenAI/Agentic AI engineering. Doing this 
+part-time (weeknights 1-2 hrs + weekends) while keeping my current job. Target: 
+start applying for AI Engineer / Agentic AI Engineer roles around Q2 2027.
+
+SITE STRUCTURE — build these sections:
+
+1. HERO / HEADER
+   - Title: "My Path to AI Engineering"
+   - Subtitle: "From LAMP → JS/React → Python & Agentic AI"
+   - Small tagline: "A working developer's switch into GenAI, tracked in public."
+
+2. WHY THIS PATH (short section)
+   - Python over Node for AI: the ecosystem (LangChain, LangGraph, CrewAI, 
+     Hugging Face) is Python-first; Node/JS AI tooling is a secondary port.
+   - Full-stack advantage: React/TS skills stay valuable as the frontend layer 
+     on top of a Python AI backend — this combination is a differentiator, 
+     not something to abandon.
+   - Avoiding the "LAMP saturation" trap: basic "call the API" prompt-wrapper 
+     work is commoditizing fast, just like LAMP CRUD work did. The durable 
+     value is in agent orchestration, RAG architecture, evals, and system 
+     design — harder to commoditize, and where the roadmap below is aimed.
+
+3. ROADMAP / TIMELINE (main feature — make this visually prominent, like a 
+   vertical timeline or stepper with progress indicators)
+   Render these phases as timeline cards, each with a title, short description, 
+   and a checklist of sub-items I can tick off (persist progress in localStorage):
+
+   Phase 1 — Python Fundamentals (Months 1-2)
+   - Data types, conditionals, loops, functions, comprehensions, generators, decorators
+   - OOP (classes, inheritance, property decorators, classmethod vs staticmethod)
+   - File handling, context managers
+   - Asyncio (event loop, tasks, gather) — deserves extra focus, different 
+     from JS's async model
+   - Multithreading/multiprocessing/GIL — understand conceptually, don't 
+     over-invest
+   - Pydantic — structured data validation, quick to learn
+
+   Phase 2 — LLM & AI Fundamentals (Month 2-3)
+   - How LLMs work: tokenization, embeddings, attention, transformers
+   - Prompt engineering: zero-shot, few-shot, chain-of-thought, structured output
+   - OpenAI & Gemini API integration with Python
+   - FastAPI basics — learned in context, wrapping real LLM calls, not 
+     generic CRUD practice
+
+   Phase 3 — RAG Systems (Month 3-5)
+   - Chunking strategies, embeddings, vector databases (Chroma, Pinecone, Qdrant)
+   - Full RAG pipeline: indexing, retrieval, answering
+   - LangChain: document loaders, splitters, retrievers, vector stores
+   - Build: Document RAG pipeline project
+
+   Phase 4 — Agents & LangGraph (Month 5-7)
+   - AI agents from scratch, tool-calling, ReAct pattern
+   - LangGraph: state, nodes, edges, checkpointing
+   - Memory systems: short-term, long-term, semantic memory, Mem0, graph 
+     memory (Neo4j)
+   - Build: CLI coding agent, stateful LangGraph agent
+
+   Phase 5 — MCP & Production Concerns (Month 7-9)
+   - Model Context Protocol: what it is, STDIO/SSE transports
+   - Build an MCP server with Python
+   - Advanced RAG: Redis/Valkey queues, async processing, scaling with FastAPI
+   - Evals & observability basics: RAGAS, LangSmith, LLM-as-judge concepts 
+     (self-taught via free docs)
+
+   Phase 6 — Portfolio & Job Prep (Month 9-12)
+   - Polish 3-4 portfolio projects (Python/FastAPI backend + React/Next.js 
+     frontend) on GitHub with good READMEs
+   - Publish build-in-public posts on LinkedIn
+   - Target titles: "AI Engineer", "GenAI Engineer", "Agentic AI Engineer" — 
+     not generic "Full Stack + AI" roles
+   - Start applying ~Q2 2027
+
+4. LEARN vs SKIP CHEAT SHEET (a two-column or tabbed component)
+   Skip / skim fast: basic Python syntax, Git basics, basic Docker, Node.js, 
+   Express, NestJS, MongoDB (not needed for this path)
+   Learn deeply: LLM fundamentals, prompting, RAG, LangChain, LangGraph, 
+   memory, MCP, evals, asyncio, Pydantic
+   One-line rule to display prominently: "Anything plain-programming (syntax, 
+   OOP, git, basic docker) → skim fast. Anything titled LLM, RAG, Agent, 
+   LangGraph, Memory, or MCP → slow down and build it for real."
+
+5. CURRENT COURSE TRACKER
+   A card showing: "Following: Complete AI & LLM Engineering Bootcamp (Udemy — 
+   Hitesh Choudhary & Piyush Garg)" with a simple progress bar / chapter 
+   checklist matching the phases above (data types → conditionals → loops → 
+   functions → comprehensions → generators/decorators → OOP → file handling → 
+   asyncio → multithreading → GIL → Pydantic → LLM fundamentals → prompting → 
+   RAG → LangChain → LangGraph → memory → MCP → multi-modal).
+
+6. PROJECT LOG (empty state now, but structured so I can add entries later)
+   A simple card grid where each entry has: project name, tech stack tags, 
+   short description, GitHub link, status (Planned / In Progress / Done). 
+   Pre-fill with these as "Planned":
+   - Tokenizer from scratch
+   - Local Ollama + FastAPI AI app
+   - Document RAG pipeline (LangChain + Vector DB)
+   - CLI coding agent
+   - Stateful LangGraph agent with memory
+   - MCP-powered AI server
+
+7. FOOTER
+   Small note: "Building in public — tracking my switch from web dev to AI 
+   engineering." Link placeholders for GitHub and LinkedIn (leave as editable 
+   placeholder text/props I can fill in).
+
+FUNCTIONAL REQUIREMENTS:
+- Use localStorage to persist checklist/progress state across visits (no 
+  backend needed).
+- Fully responsive, clean typography, subtle animations on scroll/expand are 
+  fine but keep it lightweight.
+- Structure the code so I can easily add new phases, projects, or notes later 
+  — use a config/data file (e.g., roadmapData.ts, projectsData.ts) separate 
+  from UI components, not hardcoded inline everywhere.
+- Include a README.md explaining how to run locally (npm install, npm run dev) 
+  and how to build for deployment (npm run build), suitable for a GitHub repo.
+
+Keep the visual design distinctive — not a generic template look. Pick a 
+cohesive color palette and clean typography that feels like a personal 
+engineering log, not corporate marketing.

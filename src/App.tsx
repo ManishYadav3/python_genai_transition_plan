@@ -337,7 +337,7 @@ export const App: React.FC = () => {
   const timetableCompletedCount = timetableBlocks.filter(b => b.completed).length;
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070a11] text-slate-900 dark:text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-500 flex flex-col transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#070a11] text-slate-900 dark:text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-500 flex flex-col transition-colors duration-300 overflow-x-hidden">
       <Navbar
         completedCount={completedRoadmapItems}
         totalCount={totalRoadmapItems}
@@ -350,7 +350,7 @@ export const App: React.FC = () => {
         onToggleTheme={handleToggleTheme}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0">
         {currentRoute === 'roadmap' ? (
           <>
             <Hero completedPercentage={completedPercentage} />
